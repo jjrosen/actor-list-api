@@ -32,6 +32,10 @@ class ActorsController < ApplicationController
   end
 
   def delete
+    @actor = Actor.find(params[:id])
 
+    @actor.destroy
+
+    render json: {message: "Actor File Deleted"}
   end
 end
