@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   # root "posts#index"
   get "/actors" => "actors#index"
   get "/actors/:id" => "actors#show"
+  post "/actors" => "actors#create"
 end
