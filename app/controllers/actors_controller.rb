@@ -18,4 +18,20 @@ class ActorsController < ApplicationController
 
     render template: "actors/show"
   end
+
+  def update
+    @actor = Actor.find(params[:id])
+
+    @actor.update(
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+      known_for: params[:known_for]
+    )
+    
+    render template: "actors/show"
+  end
+
+  def delete
+
+  end
 end
