@@ -38,6 +38,10 @@ test "create" do
 
     data = JSON.parse(response.body)
     assert_equal "Jared", data["first_name"]
+
+
+     put "/actors/#{actor.id}.json", params: {first_name: ""}
+     assert_response 422
   end
 
   test "destroy" do

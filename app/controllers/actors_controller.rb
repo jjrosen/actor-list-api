@@ -32,7 +32,11 @@ class ActorsController < ApplicationController
       known_for: params[:known_for] || @actor.known_for
     )
     
-    render template: "actors/show"
+    if @actor.valid?
+      render :show 
+    else 
+      render json: {errors: @actor.errors}, status: :unprocessable_entity
+    end
   end
 
   def delete
@@ -42,4 +46,5 @@ class ActorsController < ApplicationController
 
     render json: {message: "Actor File Deleted"}
   end
+
 end
