@@ -15,13 +15,13 @@ class ActorsControllerTest < ActionDispatch::IntegrationTest
     assert_response 200
 
     data = JSON.parse(response.body)
-    assert_equal ["id", "first_name", "last_name", "known_for"],
+    assert_equal ["id", "first_name", "last_name", "image",  "known_for"],
     data.keys
   end
 
 test "create" do 
     assert_difference "Actor.count", 1 do
-      post "/actors.json", params: { first_name: "John",last_name: "Smith", known_for: " Titanic" }
+      post "/actors.json", params: { first_name: "John",last_name: "Smith", image: "picture.jpeg", known_for: " Titanic" }
       assert_response 201
     end
 

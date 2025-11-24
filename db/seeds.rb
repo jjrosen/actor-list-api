@@ -9,10 +9,10 @@ require "faker"
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-5.times do
+
   Actor.create(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    known_for: Faker::Movie.title
+    first_name: "Tom",
+    last_name: "Cruise",
+    image: "https://www.bing.com/th/id/OIP.iXeOjzyP6YdLfmR7A5c1pAHaIy?w=160&h=211&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2",
+    known_for: "Top Gun"
   )
-end
