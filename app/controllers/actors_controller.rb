@@ -13,6 +13,7 @@ class ActorsController < ApplicationController
     @actor = Actor.new(
       first_name: params[:first_name],
       last_name: params[:last_name],
+      image: params[:image],
       known_for: params[:known_for]
     )
 
@@ -29,6 +30,7 @@ class ActorsController < ApplicationController
     @actor.update(
       first_name: params[:first_name] || @actor.first_name,
       last_name: params[:last_name] || @actor.last_name,
+      image: params[:image] || @actor.image,
       known_for: params[:known_for] || @actor.known_for
     )
     
