@@ -16,4 +16,9 @@ Rails.application.routes.draw do
   post "/actors" => "actors#create"
   put "actors/:id" => "actors#update"
   delete "actors/:id" => "actors#delete"
+
+  post "/users" => "users#create"
+
+  post "/sessions" => "sessions#create"
+  delete "/sessions" => "sessions#destroy"
 end
