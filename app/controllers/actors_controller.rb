@@ -16,7 +16,8 @@ class ActorsController < ApplicationController
       first_name: params[:first_name],
       last_name: params[:last_name],
       image: params[:image],
-      known_for: params[:known_for]
+      known_for: params[:known_for],
+      user_id: current_user.id
     )
 
     if @actor.save

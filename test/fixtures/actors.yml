@@ -4,8 +4,10 @@ one:
   first_name: MyString
   last_name: MyString
   known_for: MyString
+  user: one
 
 two:
   first_name: MyString
   last_name: MyString
   known_for: MyString
+  user: two
